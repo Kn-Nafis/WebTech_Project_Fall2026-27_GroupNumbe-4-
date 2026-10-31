@@ -1,4 +1,4 @@
-# Beyond the Lecture Hall (Student-Student   online help support platform)
+# LearnMate -Beyond the Lecture Hall (Student-Student   online help support platform)
 
 ## 1. Project Overview
 
