@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details - LearnMate</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="main-area">
+        <div class="topbar" id="topbar"></div>
+        <main class="content">
+            <div class="page-heading">
+                <h1>User Details</h1>
+                <p>View an example user record.</p>
+            </div>
+
+            <div class="card">
+                <div class="profile-box">
+                    <div class="profile-avatar">S</div>
+                    <div><h2>Demo Student</h2><p>Student Account</p><span class="status approved">Active</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Account Information</h2>
+                <div class="info-row"><span>Name</span><strong>Demo Student</strong></div>
+                <div class="info-row"><span>Email</span><strong>student@example.com</strong></div>
+                <div class="info-row"><span>Role</span><strong>Student</strong></div>
+                <div class="info-row"><span>Joined</span><strong>Demo record</strong></div>
+                <div class="info-row"><span>Status</span><strong>Active</strong></div>
+                <br>
+                <button class="btn btn-danger" data-action="Suspend user">Suspend User</button>
+                <button class="btn" data-action="Activate user">Activate User</button>
+                <a class="btn btn-secondary" href="user-management.html">Back to Users</a>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
