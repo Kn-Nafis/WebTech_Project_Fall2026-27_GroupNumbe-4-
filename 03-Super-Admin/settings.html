@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Settings - LearnMate</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="main-area">
+        <div class="topbar" id="topbar"></div>
+        <main class="content">
+            <div class="page-heading">
+                <h1>Settings</h1>
+                <p>Manage your administrator preferences.</p>
+            </div>
+
+            <div class="card">
+                <h2>General Settings</h2>
+                <form class="demo-form">
+                    <div class="form-group">
+                        <label>Platform Name</label>
+                        <input type="text" value="LearnMate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Support Email</label>
+                        <input type="email" value="support@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Platform Description</label>
+                        <textarea>Online learning and tutor booking platform.</textarea>
+                    </div>
+                    <button class="btn" type="submit">Save Settings</button>
+                    <p class="message"></p>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Security Settings</h2>
+                <form class="demo-form">
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" placeholder="Enter current password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" placeholder="Enter new password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password" placeholder="Confirm new password" required>
+                    </div>
+                    <button class="btn" type="submit">Update Password</button>
+                    <p class="message"></p>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Account Actions</h2>
+                <button class="btn btn-secondary" data-action="Sign out">Sign Out</button>
+                <button class="btn btn-danger" data-action="Deactivate admin account">Deactivate Account</button>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

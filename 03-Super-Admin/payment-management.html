@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Management - LearnMate</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="main-area">
+        <div class="topbar" id="topbar"></div>
+        <main class="content">
+            <div class="page-heading">
+                <h1>Payment Management</h1>
+                <p>Review payment records and payment statuses.</p>
+            </div>
+
+            <div class="card">
+                <img class="content-image" src="asset/payment-management.png" alt="Payment management illustration">
+                <div class="stats-grid">
+                    <div class="stat-card"><p>Total Payments</p><h2>--</h2></div>
+                    <div class="stat-card"><p>Successful</p><h2>--</h2></div>
+                    <div class="stat-card"><p>Pending</p><h2>--</h2></div>
+                    <div class="stat-card"><p>Refunds</p><h2>--</h2></div>
+                </div>
+                <span class="demo-label">Statistics will be available after backend integration.</span>
+            </div>
+
+            <div class="card">
+                <h2>Payment Records</h2>
+                <input class="search-box" type="text" placeholder="Search payments...">
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Payment ID</th><th>User</th><th>Amount</th><th>Method</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>PAY-DEMO-001</td><td>Demo Student</td><td>Sample amount</td><td>Not specified</td><td><span class="status approved">Successful</span></td></tr>
+                            <tr><td>PAY-DEMO-002</td><td>Demo Student 2</td><td>Sample amount</td><td>Not specified</td><td><span class="status pending">Pending</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
