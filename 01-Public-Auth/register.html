@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - LearnMate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/toma.css">
+</head>
+
+<body class="auth-body">
+
+    <div class="auth-layout">
+
+        <div class="auth-image">
+            <img src="asset/register-tutor.jpg" alt="Online tutor teaching">
+
+            <div class="image-text">
+                <h2>Become Part of LearnMate</h2>
+                <p>Join a community where students and tutors grow together.</p>
+            </div>
+        </div>
+
+        <div class="auth-card">
+
+            <a href="../index.html" class="auth-logo">LearnMate.</a>
+
+            <h1>Create Account</h1>
+            <p class="form-description">Join the LearnMate community.</p>
+
+            <form id="registerForm">
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName"
+                       placeholder="Enter your full name" required>
+
+                <label for="registerEmail">Email Address</label>
+                <input type="email" id="registerEmail" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="registerRole">I want to join as</label>
+                <select id="registerRole" name="role" required>
+                    <option value="">Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="tutor">Tutor</option>
+                </select>
+
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="password"
+                       placeholder="Create a password" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                       placeholder="Confirm your password" required>
+
+                <label class="terms-label">
+                    <input type="checkbox" id="acceptTerms" required>
+                    I agree to the terms and conditions.
+                </label>
+
+                <button type="submit" class="main-button">
+                    Create Account
+                </button>
+
+                <p id="registerMessage" class="form-message"></p>
+
+            </form>
+
+            <p class="bottom-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="js/toma.js"></script>
+
+</body>
+</html>
