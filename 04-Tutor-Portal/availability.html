@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutor Availability - LearnMate</title>
+    <link rel="stylesheet" href="css/sakib.css">
+    <script src="js/sakib.js" defer></script>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+    <div class="logo">LearnMate</div>
+    <h3>Main Menu</h3>
+    <a href="index.html">Tutor Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">My Profile</a>
+    <h3>Teaching</h3>
+    <a href="availability.html">Availability</a>
+    <a href="booking-requests.html">Booking Requests</a>
+    <a href="sessions.html">My Sessions</a>
+    <a href="courses.html">My Courses</a>
+    <a href="students.html">My Students</a>
+    <h3>Performance</h3>
+    <a href="earnings.html">Earnings</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="teaching-materials.html">Teaching Materials</a>
+    <a href="messages.html">Messages</a>
+    <a href="settings.html">Settings</a>
+</div>
+
+<div class="main-content">
+    <div class="topbar">
+        <button class="menu-toggle" onclick="toggleSidebar()">Menu</button>
+        <h2>Availability</h2>
+        <div class="tutor-info">Tutor Account</div>
+    </div>
+
+    <div class="page-title">
+        <h1>Manage Availability</h1>
+        <p>Set the days and times when students can book sessions.</p>
+    </div>
+
+    <div class="content-box form-container">
+        <h2>Add Available Time</h2>
+
+        <form id="availabilityForm">
+            <div class="form-group">
+                <label>Select Day</label>
+                <select required>
+                    <option value="">Choose a day</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Start Time</label>
+                <input type="time" required>
+            </div>
+
+            <div class="form-group">
+                <label>End Time</label>
+                <input type="time" required>
+            </div>
+
+            <div class="form-group">
+                <label>Session Type</label>
+                <select required>
+                    <option value="">Select session type</option>
+                    <option>Online</option>
+                    <option>In Person</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Add Availability</button>
+        </form>
+    </div>
+
+    <div class="content-box">
+        <h2>Current Availability</h2>
+        <div class="empty-state">
+            No availability schedule has been added.
+        </div>
+    </div>
+</div>
+
+<script>
+handleDemoForm(
+    "availabilityForm",
+    "Demo availability submitted. It has not been saved."
+);
+</script>
+
+</body>
+</html>

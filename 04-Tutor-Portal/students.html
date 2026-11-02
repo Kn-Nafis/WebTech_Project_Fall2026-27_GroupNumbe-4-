@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Students - LearnMate</title>
+    <link rel="stylesheet" href="css/sakib.css">
+    <script src="js/sakib.js" defer></script>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+    <div class="logo">LearnMate</div>
+    <h3>Main Menu</h3>
+    <a href="index.html">Tutor Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">My Profile</a>
+    <h3>Teaching</h3>
+    <a href="availability.html">Availability</a>
+    <a href="booking-requests.html">Booking Requests</a>
+    <a href="sessions.html">My Sessions</a>
+    <a href="courses.html">My Courses</a>
+    <a href="students.html">My Students</a>
+    <h3>Performance</h3>
+    <a href="earnings.html">Earnings</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="teaching-materials.html">Teaching Materials</a>
+    <a href="messages.html">Messages</a>
+    <a href="settings.html">Settings</a>
+</div>
+
+<div class="main-content">
+    <div class="topbar">
+        <button class="menu-toggle" onclick="toggleSidebar()">Menu</button>
+        <h2>My Students</h2>
+        <div class="tutor-info">Tutor Account</div>
+    </div>
+
+    <div class="page-title">
+        <h1>Student Management</h1>
+        <p>View students who learn with you.</p>
+    </div>
+
+    <div class="content-box">
+        <h2>Student List</h2>
+
+        <input type="text" class="search-box" id="studentSearch"
+            placeholder="Search students...">
+
+        <table id="studentTable">
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Enrolled Course</th>
+                <th>Sessions</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td colspan="6" class="empty-state">
+                    No student records available.
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+searchTable("studentSearch", "studentTable");
+</script>
+
+</body>
+</html>

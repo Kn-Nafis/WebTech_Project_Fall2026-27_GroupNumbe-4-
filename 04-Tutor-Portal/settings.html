@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutor Settings - LearnMate</title>
+    <link rel="stylesheet" href="css/sakib.css">
+    <script src="js/sakib.js" defer></script>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+    <div class="logo">LearnMate</div>
+    <h3>Main Menu</h3>
+    <a href="index.html">Tutor Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">My Profile</a>
+    <h3>Teaching</h3>
+    <a href="availability.html">Availability</a>
+    <a href="booking-requests.html">Booking Requests</a>
+    <a href="sessions.html">My Sessions</a>
+    <a href="courses.html">My Courses</a>
+    <a href="students.html">My Students</a>
+    <h3>Performance</h3>
+    <a href="earnings.html">Earnings</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="teaching-materials.html">Teaching Materials</a>
+    <a href="messages.html">Messages</a>
+    <a href="settings.html">Settings</a>
+</div>
+
+<div class="main-content">
+    <div class="topbar">
+        <button class="menu-toggle" onclick="toggleSidebar()">Menu</button>
+        <h2>Settings</h2>
+        <div class="tutor-info">Tutor Account</div>
+    </div>
+
+    <div class="page-title">
+        <h1>Account Settings</h1>
+        <p>Manage your account and profile preferences.</p>
+    </div>
+
+    <div class="content-box form-container">
+        <h2>Update Account Information</h2>
+
+        <form id="tutorSettingsForm">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label>New Password</label>
+                <input type="password" placeholder="Enter a new password">
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm your password">
+            </div>
+
+            <button type="submit" class="btn">Save Settings</button>
+        </form>
+    </div>
+
+    <div class="content-box">
+        <h2>Profile Management</h2>
+        <p>Update your public tutor profile and teaching information.</p>
+        <br>
+        <a href="profile.html" class="btn">View My Profile</a>
+    </div>
+</div>
+
+<script>
+handleDemoForm(
+    "tutorSettingsForm",
+    "Demo settings submitted. Changes are not permanently saved."
+);
+</script>
+
+</body>
+</html>
