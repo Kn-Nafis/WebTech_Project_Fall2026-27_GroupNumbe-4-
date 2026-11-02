@@ -1,0 +1,506 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F7FA;
+    color: #131318;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.student-header {
+    background-color: #FFFFFF;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.student-logo {
+    color: #4A3AFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.student-header a:hover {
+    color: #4A3AFF;
+}
+
+.student-header .logout-link {
+    background-color: #EAFC24;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.student-layout {
+    display: flex;
+    min-height: calc(100vh - 65px);
+}
+
+.student-sidebar {
+    width: 240px;
+    background-color: #131318;
+    color: #FFFFFF;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.student-sidebar h3 {
+    color: #AAAAAA;
+    font-size: 12px;
+    margin: 10px 12px 15px;
+    letter-spacing: 1px;
+}
+
+.student-sidebar a {
+    display: block;
+    padding: 12px;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.student-sidebar a:hover,
+.student-sidebar a.active {
+    background-color: #4A3AFF;
+    color: #FFFFFF;
+}
+
+.student-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.page-heading p {
+    color: #777777;
+    font-size: 14px;
+}
+
+.student-button {
+    display: inline-block;
+    background-color: #4A3AFF;
+    color: #FFFFFF;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.student-button:hover {
+    background-color: #3022D5;
+}
+
+.student-button.lime {
+    background-color: #EAFC24;
+    color: #131318;
+}
+
+.student-button.lime:hover {
+    background-color: #D6E91B;
+}
+
+.student-button.danger {
+    background-color: #D93030;
+    color: #FFFFFF;
+}
+
+.student-button.small {
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.student-card {
+    background-color: #FFFFFF;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #EEEEEE;
+}
+
+.student-card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.student-card .big-number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.student-card p {
+    color: #777777;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.content-box {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.content-box h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.content-box p {
+    line-height: 1.6;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+
+.student-table th,
+.student-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 14px;
+}
+
+.student-table th {
+    background-color: #F5F4FF;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: #EEEEEE;
+}
+
+.status.pending {
+    background-color: #FFF0C2;
+    color: #805A00;
+}
+
+.status.completed {
+    background-color: #E2F7E5;
+    color: #247333;
+}
+
+.status.cancelled {
+    background-color: #FFE1E1;
+    color: #A51D1D;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    border: 1px solid #DDDDDD;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.student-form {
+    max-width: 650px;
+}
+
+.student-form label {
+    display: block;
+    font-weight: bold;
+    margin: 16px 0 8px;
+    font-size: 14px;
+}
+
+.student-form input,
+.student-form select,
+.student-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.student-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.student-form button {
+    margin-top: 20px;
+}
+
+.tutor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.tutor-card {
+    background-color: #FFFFFF;
+    padding: 22px;
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+}
+
+.tutor-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #EAFC24;
+    color: #131318;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tutor-card h3 {
+    margin-bottom: 8px;
+}
+
+.tutor-card p {
+    color: #777777;
+    font-size: 13px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.tutor-card .student-button {
+    margin-top: 12px;
+}
+
+.progress-background {
+    width: 100%;
+    height: 10px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.progress-fill {
+    height: 10px;
+    background-color: #4A3AFF;
+    border-radius: 10px;
+}
+
+.message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message-item {
+    padding: 15px;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.message-item p {
+    margin-top: 7px;
+    color: #777777;
+    font-size: 14px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 35px 15px;
+    color: #777777;
+}
+
+.empty-state h3 {
+    color: #131318;
+    margin-bottom: 10px;
+}
+
+.filter-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-row select {
+    padding: 11px;
+    border: 1px solid #DDDDDD;
+    border-radius: 7px;
+}
+
+.student-footer {
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+    font-size: 13px;
+}
+
+.form-message {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tutor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .student-layout {
+        flex-direction: column;
+    }
+
+    .student-sidebar {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .student-sidebar h3 {
+        display: none;
+    }
+
+    .student-sidebar a {
+        display: inline-block;
+        margin: 3px;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .student-content {
+        padding: 18px;
+    }
+
+    .student-grid,
+    .tutor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-header {
+        padding: 15px;
+    }
+
+    .student-table {
+        min-width: 600px;
+    }
+
+    .content-box.table-box {
+        overflow-x: auto;
+    }
+}
+
+
+/* Student Portal Illustrations */
+
+.student-illustration-banner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-bottom: 25px;
+    min-height: 190px;
+}
+
+.student-illustration-banner img {
+    width: 210px;
+    height: 160px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.student-illustration-banner h2 {
+    color: #131318;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.student-illustration-banner p {
+    color: #777777;
+    line-height: 1.6;
+    max-width: 550px;
+}
+
+.tutor-card-image {
+    width: 100%;
+    height: 155px;
+    object-fit: contain;
+    background-color: #F7F7FA;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.profile-tutor-image {
+    display: block;
+    width: 220px;
+    height: 180px;
+    object-fit: contain;
+    background-color: #F7F7FA;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .student-illustration-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .student-illustration-banner img {
+        width: 100%;
+        max-width: 230px;
+        height: 150px;
+    }
+
+    .profile-tutor-image {
+        width: 100%;
+        max-width: 220px;
+    }
+}

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Reviews - LearnMate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/toma.css">
+</head>
+<body>
+
+<header class="student-header">
+    <a href="index.html" class="student-logo">LearnMate.</a>
+    <a href="../01-Public-Auth/login.html" class="logout-link">Logout</a>
+</header>
+
+<div class="student-layout">
+
+    <aside class="student-sidebar">
+        <h3>STUDENT MENU</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="browse-tutors.html">Browse Tutors</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="my-sessions.html">My Sessions</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="messages.html">Messages</a>
+        <a class="active" href="my-reviews.html">My Reviews</a>
+        <a href="profile.html">My Profile</a>
+        <a href="learning-progress.html">Learning Progress</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="settings.html">Settings</a>
+    </aside>
+
+    <main class="student-content">
+
+        <section class="page-heading">
+            <div>
+                <h1>My Reviews</h1>
+                <p>Share feedback about your learning experience.</p>
+            </div>
+        </section>
+
+
+        <section class="student-illustration-banner">
+            <img src="asset/tutor-illustration.png" alt="Share your learning experience">
+            <div>
+                <h2>Share your learning experience</h2>
+                <p>Your feedback helps describe your experience with tutors.</p>
+            </div>
+        </section>
+        <section class="content-box">
+
+            <h2>Write a Review</h2>
+
+            <form id="reviewForm" class="student-form">
+
+                <label for="reviewTutor">Tutor Name</label>
+                <input type="text" id="reviewTutor"
+                       placeholder="Enter tutor name" required>
+
+                <label for="reviewRating">Rating</label>
+                <select id="reviewRating" required>
+                    <option value="">Select rating</option>
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="3">3 - Good</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="1">1 - Poor</option>
+                </select>
+
+                <label for="reviewText">Your Review</label>
+                <textarea id="reviewText"
+                          placeholder="Write your feedback..."
+                          required></textarea>
+
+                <button type="submit" class="student-button">
+                    Submit Review
+                </button>
+
+                <p id="reviewMessage" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+        <section class="content-box">
+            <h2>Previous Reviews</h2>
+            <div class="empty-state">
+                <p>Your submitted reviews will be displayed here when connected to a backend.</p>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/toma.js"></script>
+</body>
+</html>

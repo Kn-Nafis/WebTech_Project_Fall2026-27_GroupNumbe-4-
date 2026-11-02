@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Settings - LearnMate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/toma.css">
+</head>
+<body>
+
+<header class="student-header">
+    <a href="index.html" class="student-logo">LearnMate.</a>
+    <a href="../01-Public-Auth/login.html" class="logout-link">Logout</a>
+</header>
+
+<div class="student-layout">
+
+    <aside class="student-sidebar">
+        <h3>STUDENT MENU</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="browse-tutors.html">Browse Tutors</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="my-sessions.html">My Sessions</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="messages.html">Messages</a>
+        <a href="my-reviews.html">My Reviews</a>
+        <a href="profile.html">My Profile</a>
+        <a href="learning-progress.html">Learning Progress</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="certificates.html">Certificates</a>
+        <a class="active" href="settings.html">Settings</a>
+    </aside>
+
+    <main class="student-content">
+
+        <section class="page-heading">
+            <div>
+                <h1>Settings</h1>
+                <p>Manage your account preferences.</p>
+            </div>
+        </section>
+
+
+        <section class="student-illustration-banner">
+            <img src="asset/student-dashboard.png" alt="Set up your learning preferences">
+            <div>
+                <h2>Set up your learning preferences</h2>
+                <p>Manage your account preferences in one place.</p>
+            </div>
+        </section>
+        <section class="content-box">
+
+            <h2>Account Preferences</h2>
+
+            <form id="settingsForm" class="student-form">
+
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="English">English</option>
+                    <option value="Bangla">Bangla</option>
+                </select>
+
+                <label for="emailNotifications">Email Notifications</label>
+                <select id="emailNotifications">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+
+                <label for="privacySetting">Profile Visibility</label>
+                <select id="privacySetting">
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+
+                <button type="submit" class="student-button">
+                    Save Settings
+                </button>
+
+                <p id="settingsMessage" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+        <section class="content-box">
+            <h2>Account Security</h2>
+            <p>Account password and security management will be connected to the authentication backend later.</p>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/toma.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar - LearnMate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/toma.css">
+</head>
+<body>
+
+<header class="student-header">
+    <a href="index.html" class="student-logo">LearnMate.</a>
+    <a href="../01-Public-Auth/login.html" class="logout-link">Logout</a>
+</header>
+
+<div class="student-layout">
+
+    <aside class="student-sidebar">
+        <h3>STUDENT MENU</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="browse-tutors.html">Browse Tutors</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="my-sessions.html">My Sessions</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="messages.html">Messages</a>
+        <a href="my-reviews.html">My Reviews</a>
+        <a href="profile.html">My Profile</a>
+        <a href="learning-progress.html">Learning Progress</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a class="active" href="calendar.html">Calendar</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="settings.html">Settings</a>
+    </aside>
+
+    <main class="student-content">
+
+        <section class="page-heading">
+            <div>
+                <h1>My Calendar</h1>
+                <p>Manage your learning schedule.</p>
+            </div>
+        </section>
+
+
+        <section class="student-illustration-banner">
+            <img src="asset/calendar-illustration.png" alt="Plan and organize your study time">
+            <div>
+                <h2>Plan and organize your study time</h2>
+                <p>Keep your learning schedule organized in one place.</p>
+            </div>
+        </section>
+        <section class="content-box">
+
+            <h2>Add a Study Event</h2>
+
+            <form class="student-form student-demo-form">
+
+                <label for="eventTitle">Event Title</label>
+                <input type="text" id="eventTitle"
+                       placeholder="Enter event title" required>
+
+                <label for="eventDate">Event Date</label>
+                <input type="date" id="eventDate" required>
+
+                <label for="eventTime">Event Time</label>
+                <input type="time" id="eventTime" required>
+
+                <label for="eventDescription">Description</label>
+                <textarea id="eventDescription"
+                          placeholder="Enter event details"></textarea>
+
+                <button type="submit" class="student-button">
+                    Add Event
+                </button>
+
+                <p class="form-message"></p>
+
+            </form>
+
+        </section>
+
+        <section class="content-box">
+            <h2>Scheduled Events</h2>
+            <div class="empty-state">
+                <h3>No scheduled events</h3>
+                <p>Your study events and sessions will appear here.</p>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/toma.js"></script>
+</body>
+</html>

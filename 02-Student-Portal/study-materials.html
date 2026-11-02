@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Materials - LearnMate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/toma.css">
+</head>
+<body>
+
+<header class="student-header">
+    <a href="index.html" class="student-logo">LearnMate.</a>
+    <a href="../01-Public-Auth/login.html" class="logout-link">Logout</a>
+</header>
+
+<div class="student-layout">
+
+    <aside class="student-sidebar">
+        <h3>STUDENT MENU</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="browse-tutors.html">Browse Tutors</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="my-sessions.html">My Sessions</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="messages.html">Messages</a>
+        <a href="my-reviews.html">My Reviews</a>
+        <a href="profile.html">My Profile</a>
+        <a href="learning-progress.html">Learning Progress</a>
+        <a class="active" href="study-materials.html">Study Materials</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="settings.html">Settings</a>
+    </aside>
+
+    <main class="student-content">
+
+        <section class="page-heading">
+            <div>
+                <h1>Study Materials</h1>
+                <p>Access your learning resources and documents.</p>
+            </div>
+        </section>
+
+
+        <section class="student-illustration-banner">
+            <img src="asset/study-illustration.png" alt="Your learning resources">
+            <div>
+                <h2>Your learning resources</h2>
+                <p>Keep your notes and study materials organized.</p>
+            </div>
+        </section>
+        <input type="text" class="search-bar student-search"
+               data-target=".material-row"
+               placeholder="Search study materials...">
+
+        <section class="content-box table-box">
+
+            <h2>Available Materials</h2>
+
+            <table class="student-table">
+
+                <tr>
+                    <th>Material</th>
+                    <th>Subject</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr class="material-row">
+                    <td>Mathematics Notes</td>
+                    <td>Mathematics</td>
+                    <td>Notes</td>
+                    <td>Not uploaded</td>
+                </tr>
+
+                <tr class="material-row">
+                    <td>English Grammar Guide</td>
+                    <td>English</td>
+                    <td>Document</td>
+                    <td>Not uploaded</td>
+                </tr>
+
+                <tr class="material-row">
+                    <td>Programming Exercises</td>
+                    <td>Programming</td>
+                    <td>Exercises</td>
+                    <td>Not uploaded</td>
+                </tr>
+
+            </table>
+
+            <p class="form-message">
+                These are example material categories. No downloadable files are attached.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/toma.js"></script>
+</body>
+</html>
