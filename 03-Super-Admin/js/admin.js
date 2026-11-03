@@ -94,6 +94,14 @@ for (var b = 0; b < actionButtons.length; b++) {
     actionButtons[b].addEventListener("click", function () {
         var action = this.getAttribute("data-action");
 
-        alert("Demo action: " + action);
+        if (action === "Sign out") {
+            var confirmLogout = confirm("Are you sure you want to sign out?");
+
+            if (confirmLogout) {
+                window.location.href = "../01-Public-Auth/login.html";
+            }
+        } else {
+            alert("Demo action: " + action);
+        }
     });
 }
