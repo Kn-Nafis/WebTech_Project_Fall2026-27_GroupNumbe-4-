@@ -1,37 +1,97 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking Management - LearnMate</title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/admin.css" />
     <script src="js/admin.js" defer></script>
-</head>
-<body>
-<div class="admin-layout">
-    <div class="sidebar" id="sidebar"></div>
-    <div class="main-area">
-        <div class="topbar" id="topbar"></div>
-        <main class="content">
-            <div class="page-heading">
-                <h1>Booking Management</h1>
-                <p>Monitor and manage student tutor bookings.</p>
-            </div>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div class="sidebar">
+        <div class="logo">LearnMate</div>
+        <p>Administration</p>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="user-management.html">User Management</a>
+        <a href="tutor-verification.html">Tutor Verification</a>
+        <a href="course-management.html">Course Management</a>
+        <a href="category-management.html">Category Management</a>
+        <a class="active" href="booking-management.html">Booking Management</a>
+        <a href="session-management.html">Session Management</a>
+        <a href="payment-management.html">Payment Management</a>
+        <a href="transaction-history.html">Transaction History</a>
+        <a href="review-management.html">Review Management</a>
+        <a href="report-management.html">Report Management</a>
+        <a href="notification-management.html">Notification Management</a>
+        <a href="support-management.html">Support Management</a>
+        <a href="settings.html">Settings</a>
+      </div>
 
-            <div class="card">
-                <h2>Booking Records</h2>
-                <input class="search-box" type="text" placeholder="Search bookings...">
-                <div class="table-wrapper">
-                    <table>
-                        <thead><tr><th>Booking ID</th><th>Student</th><th>Tutor</th><th>Date</th><th>Status</th><th>Action</th></tr></thead>
-                        <tbody>
-                            <tr><td>BK-DEMO-001</td><td>Demo Student</td><td>Demo Tutor</td><td>Not scheduled</td><td><span class="status pending">Pending</span></td><td><button class="btn" data-action="View booking">View</button></td></tr>
-                            <tr><td>BK-DEMO-002</td><td>Demo Student 2</td><td>Demo Tutor 2</td><td>Not scheduled</td><td><span class="status approved">Confirmed</span></td><td><button class="btn" data-action="View booking">View</button></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <span class="demo-label">Example booking records.</span>
+      <div class="main-area">
+        <div class="topbar">
+          <h2>Super Admin Panel</h2>
+          <span>Administrator</span>
+        </div>
+
+        <main class="content">
+          <div class="page-heading">
+            <h1>Booking Management</h1>
+            <p>Monitor and manage student tutor bookings.</p>
+          </div>
+
+          <div class="card">
+            <h2>Booking Records</h2>
+            <input
+              class="search-box"
+              type="text"
+              placeholder="Search bookings..."
+            />
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Booking ID</th>
+                    <th>Student</th>
+                    <th>Tutor</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BK-DEMO-001</td>
+                    <td>Demo Student</td>
+                    <td>Demo Tutor</td>
+                    <td>Not scheduled</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>
+                      <button class="btn" data-action="View booking">
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>BK-DEMO-002</td>
+                    <td>Demo Student 2</td>
+                    <td>Demo Tutor 2</td>
+                    <td>Not scheduled</td>
+                    <td><span class="status approved">Confirmed</span></td>
+                    <td>
+                      <button class="btn" data-action="View booking">
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+            <span class="demo-label">Example booking records.</span>
+          </div>
         </main>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

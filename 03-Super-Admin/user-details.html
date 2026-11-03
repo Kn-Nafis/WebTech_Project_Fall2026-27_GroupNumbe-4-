@@ -1,42 +1,88 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Details - LearnMate</title>
-    <link rel="stylesheet" href="css/admin.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutor Details - LearnMate</title>
+    <link rel="stylesheet" href="css/admin.css" />
     <script src="js/admin.js" defer></script>
-</head>
-<body>
-<div class="admin-layout">
-    <div class="sidebar" id="sidebar"></div>
-    <div class="main-area">
-        <div class="topbar" id="topbar"></div>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div class="sidebar">
+        <div class="logo">LearnMate</div>
+        <p>Administration</p>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="user-management.html">User Management</a>
+        <a href="tutor-verification.html">Tutor Verification</a>
+        <a href="course-management.html">Course Management</a>
+        <a href="category-management.html">Category Management</a>
+        <a href="booking-management.html">Booking Management</a>
+        <a href="session-management.html">Session Management</a>
+        <a href="payment-management.html">Payment Management</a>
+        <a href="transaction-history.html">Transaction History</a>
+        <a href="review-management.html">Review Management</a>
+        <a href="report-management.html">Report Management</a>
+        <a href="notification-management.html">Notification Management</a>
+        <a href="support-management.html">Support Management</a>
+        <a href="settings.html">Settings</a>
+      </div>
+
+      <div class="main-area">
+        <div class="topbar">
+          <h2>Super Admin Panel</h2>
+          <span>Administrator</span>
+        </div>
+
         <main class="content">
-            <div class="page-heading">
-                <h1>User Details</h1>
-                <p>View an example user record.</p>
-            </div>
+          <div class="page-heading">
+            <h1>Tutor Details</h1>
+            <p>Review tutor profile and application information.</p>
+          </div>
 
-            <div class="card">
-                <div class="profile-box">
-                    <div class="profile-avatar">S</div>
-                    <div><h2>Demo Student</h2><p>Student Account</p><span class="status approved">Active</span></div>
-                </div>
+          <div class="card">
+            <div class="profile-box">
+              <div class="profile-avatar">T</div>
+              <div>
+                <h2>Demo Tutor</h2>
+                <p>Mathematics Tutor</p>
+                <span class="status pending">Verification Pending</span>
+              </div>
             </div>
+          </div>
 
-            <div class="card">
-                <h2>Account Information</h2>
-                <div class="info-row"><span>Name</span><strong>Demo Student</strong></div>
-                <div class="info-row"><span>Email</span><strong>student@example.com</strong></div>
-                <div class="info-row"><span>Role</span><strong>Student</strong></div>
-                <div class="info-row"><span>Joined</span><strong>Demo record</strong></div>
-                <div class="info-row"><span>Status</span><strong>Active</strong></div>
-                <br>
-                <button class="btn btn-danger" data-action="Suspend user">Suspend User</button>
-                <button class="btn" data-action="Activate user">Activate User</button>
-                <a class="btn btn-secondary" href="user-management.html">Back to Users</a>
+          <div class="card">
+            <h2>Application Information</h2>
+            <div class="info-row">
+              <span>Name</span><strong>Demo Tutor</strong>
             </div>
+            <div class="info-row">
+              <span>Email</span><strong>tutor@example.com</strong>
+            </div>
+            <div class="info-row">
+              <span>Subject</span><strong>Mathematics</strong>
+            </div>
+            <div class="info-row">
+              <span>Experience</span><strong>Not provided</strong>
+            </div>
+            <div class="info-row">
+              <span>Documents</span><strong>No real file attached</strong>
+            </div>
+            <br />
+            <button class="btn" data-action="Approve tutor application">
+              Approve
+            </button>
+            <button
+              class="btn btn-danger"
+              data-action="Reject tutor application"
+            >
+              Reject
+            </button>
+            <a class="btn btn-secondary" href="tutor-verification.html">Back</a>
+          </div>
         </main>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

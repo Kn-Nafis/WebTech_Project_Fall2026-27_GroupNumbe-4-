@@ -1,38 +1,100 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Management - LearnMate</title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/admin.css" />
     <script src="js/admin.js" defer></script>
-</head>
-<body>
-<div class="admin-layout">
-    <div class="sidebar" id="sidebar"></div>
-    <div class="main-area">
-        <div class="topbar" id="topbar"></div>
-        <main class="content">
-            <div class="page-heading">
-                <h1>Course Management</h1>
-                <p>Manage courses published on LearnMate.</p>
-            </div>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div class="sidebar">
+        <div class="logo">LearnMate</div>
+        <p>Administration</p>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="user-management.html">User Management</a>
+        <a href="tutor-verification.html">Tutor Verification</a>
+        <a class="active" href="course-management.html">Course Management</a>
+        <a href="category-management.html">Category Management</a>
+        <a href="booking-management.html">Booking Management</a>
+        <a href="session-management.html">Session Management</a>
+        <a href="payment-management.html">Payment Management</a>
+        <a href="transaction-history.html">Transaction History</a>
+        <a href="review-management.html">Review Management</a>
+        <a href="report-management.html">Report Management</a>
+        <a href="notification-management.html">Notification Management</a>
+        <a href="support-management.html">Support Management</a>
+        <a href="settings.html">Settings</a>
+      </div>
 
-            <div class="card">
-                <img class="content-image" src="asset/course-management.png" alt="Course management illustration">
-                <h2>Course List</h2>
-                <input class="search-box" type="text" placeholder="Search courses...">
-                <div class="table-wrapper">
-                    <table>
-                        <thead><tr><th>Course</th><th>Tutor</th><th>Category</th><th>Status</th><th>Action</th></tr></thead>
-                        <tbody>
-                            <tr><td>Demo Mathematics</td><td>Demo Tutor</td><td>Mathematics</td><td><span class="status approved">Published</span></td><td><button class="btn" data-action="View course">View</button></td></tr>
-                            <tr><td>Demo English</td><td>Demo Tutor</td><td>Language</td><td><span class="status pending">Pending</span></td><td><button class="btn" data-action="Review course">Review</button></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <span class="demo-label">Example course records.</span>
+      <div class="main-area">
+        <div class="topbar">
+          <h2>Super Admin Panel</h2>
+          <span>Administrator</span>
+        </div>
+
+        <main class="content">
+          <div class="page-heading">
+            <h1>Course Management</h1>
+            <p>Manage courses published on LearnMate.</p>
+          </div>
+
+          <div class="card">
+            <img
+              class="content-image"
+              src="asset/course-management.png"
+              alt="Course management illustration"
+            />
+            <h2>Course List</h2>
+            <input
+              class="search-box"
+              type="text"
+              placeholder="Search courses..."
+            />
+
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Tutor</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Demo Mathematics</td>
+                    <td>Demo Tutor</td>
+                    <td>Mathematics</td>
+                    <td><span class="status approved">Published</span></td>
+                    <td>
+                      <button class="btn" data-action="View course">
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Demo English</td>
+                    <td>Demo Tutor</td>
+                    <td>Language</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>
+                      <button class="btn" data-action="Review course">
+                        Review
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+            <span class="demo-label">Example course records.</span>
+          </div>
         </main>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

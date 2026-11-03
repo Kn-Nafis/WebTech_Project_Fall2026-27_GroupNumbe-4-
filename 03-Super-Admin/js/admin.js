@@ -1,107 +1,157 @@
-var menuItems = [
-    ["Dashboard", "dashboard.html"],
-    ["Profile", "profile.html"],
-    ["Edit Profile", "edit-profile.html"],
-    ["User Management", "user-management.html"],
-    ["User Details", "user-details.html"],
-    ["Tutor Verification", "tutor-verification.html"],
-    ["Tutor Details", "tutor-details.html"],
-    ["Course Management", "course-management.html"],
-    ["Category Management", "category-management.html"],
-    ["Booking Management", "booking-management.html"],
-    ["Session Management", "session-management.html"],
-    ["Payment Management", "payment-management.html"],
-    ["Transaction History", "transaction-history.html"],
-    ["Review Management", "review-management.html"],
-    ["Report Management", "report-management.html"],
-    ["Notification Management", "notification-management.html"],
-    ["Support Management", "support-management.html"],
-    ["Settings", "settings.html"]
-];
+console.log("JS Connected");
 
-var currentPage = window.location.pathname.split("/").pop();
+/* General settings form */
+function collect_settings() {
+  let Name = validatePlatformName();
+  let Email = validateSupportEmail();
+  let Message = document.getElementById("SettingsMessage");
 
-var sidebar = document.getElementById("sidebar");
+  if (Name == true && Email == true) {
+    Message.textContent = " Settings are valid. No changes have been saved.";
+  } else {
+    Message.textContent = "Please correct the errors above.";
+  }
 
-if (sidebar) {
-    var sidebarHTML = '<div class="logo">LearnMate</div>';
-    sidebarHTML += '<p>Administration</p>';
-
-    for (var i = 0; i < menuItems.length; i++) {
-        var activeClass = "";
-
-        if (menuItems[i][1] === currentPage) {
-            activeClass = "active";
-        }
-
-        sidebarHTML += '<a class="' + activeClass + '" href="' +
-            menuItems[i][1] + '">' + menuItems[i][0] + '</a>';
-    }
-
-    sidebar.innerHTML = sidebarHTML;
+  return false;
 }
 
-var topbar = document.getElementById("topbar");
+function validatePlatformName() {
+  let Name = document.getElementById("platformName").value.trim();
+  let Error = document.getElementById("PlatformNameError");
 
-if (topbar) {
-    topbar.innerHTML =
-        '<h2>Super Admin Panel</h2><span>Administrator</span>';
+  if (Name == "") {
+    Error.textContent = "Please enter the platform name.";
+    return false;
+  } else {
+    Error.textContent = "";
+    return true;
+  }
 }
 
-/* Search table rows */
-var searchInputs = document.querySelectorAll(".search-box");
+function validateSupportEmail() {
+  let Email = document.getElementById("supportEmail").value.trim();
+  let Error = document.getElementById("SupportEmailError");
+  let RegularExpression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-for (var s = 0; s < searchInputs.length; s++) {
-    searchInputs[s].addEventListener("input", function () {
-        var searchText = this.value.toLowerCase();
-        var table = document.querySelector("table");
-
-        if (table) {
-            var rows = table.querySelectorAll("tbody tr");
-
-            for (var r = 0; r < rows.length; r++) {
-                var rowText = rows[r].innerText.toLowerCase();
-
-                if (rowText.indexOf(searchText) > -1) {
-                    rows[r].style.display = "";
-                } else {
-                    rows[r].style.display = "none";
-                }
-            }
-        }
-    });
+  if (Email == "") {
+    Error.textContent = "Please enter the support email.";
+    return false;
+  } else if (!RegularExpression.test(Email)) {
+    Error.textContent = "Please enter a valid email address.";
+    return false;
+  } else {
+    Error.textContent = "";
+    return true;
+  }
 }
 
-/* Demo form submission */
-var forms = document.querySelectorAll(".demo-form");
+/* Password form */
+function collect_password() {
+  let Current = validateCurrentPassword();
+  let New = validateNewPassword();
+  let Confirm = validateConfirmPassword();
+  let Message = document.getElementById("PasswordMessage");
 
-for (var f = 0; f < forms.length; f++) {
-    forms[f].addEventListener("submit", function (event) {
-        event.preventDefault();
+  if (Current == true && New == true && Confirm == true) {
+    Message.textContent =
+      "Demo: Password fields are valid. The password has not been changed.";
+  } else {
+    Message.textContent = "Please correct the errors above.";
+  }
 
-        var message = this.querySelector(".message");
-
-        if (message) {
-            message.innerText = "Demo: Your changes have been submitted successfully.";
-        }
-    });
+  return false;
 }
 
-/* Demo action buttons */
-var actionButtons = document.querySelectorAll("[data-action]");
+function validateCurrentPassword() {
+  let Password = document.getElementById("currentPassword").value;
+  let Error = document.getElementById("CurrentPasswordError");
 
-for (var b = 0; b < actionButtons.length; b++) {
-    actionButtons[b].addEventListener("click", function () {
-        var action = this.getAttribute("data-action");
+  if (Password == "") {
+    Error.textContent = "Please enter your current password.";
+    return false;
+  } else {
+    Error.textContent = "";
+    return true;
+  }
+}
 
-        if (action === "Sign out") {
-            var confirmLogout = confirm("Are you sure you want to sign out?");
+function validateNewPassword() {
+  let Password = document.getElementById("newPassword").value;
+  let Error = document.getElementById("NewPasswordError");
 
-            if (confirmLogout) {
-                window.location.href = "../01-Public-Auth/login.html";
-            }
+  if (Password == "") {
+    Error.textContent = "Please enter a new password.";
+    return false;
+  } else {
+    Error.textContent = "";
+    return true;
+  }
+}
+
+function validateConfirmPassword() {
+  let Password = document.getElementById("newPassword").value;
+  let Confirm = document.getElementById("confirmPassword").value;
+  let Error = document.getElementById("ConfirmPasswordError");
+
+  if (Confirm == "") {
+    Error.textContent = "Please confirm your new password.";
+    return false;
+  } else if (Password !== Confirm) {
+    Error.textContent = "New password and confirm password must match.";
+    return false;
+  } else {
+    Error.textContent = "";
+    return true;
+  }
+}
+
+/* Other existing demo forms */
+function submitDemoForm(event) {
+  event.preventDefault();
+
+  let Message = this.querySelector(".message");
+
+  if (Message) {
+    Message.textContent = "Demo: Form submitted. No changes have been saved.";
+  }
+}
+
+let Forms = document.querySelectorAll(".demo-form");
+
+for (let i = 0; i < Forms.length; i++) {
+  Forms[i].addEventListener("submit", submitDemoForm);
+}
+
+/* Existing demo action buttons */
+function showDemoAction() {
+  let Action = this.getAttribute("data-action");
+  alert("Demo action: " + Action);
+}
+
+let Buttons = document.querySelectorAll("[data-action]");
+
+for (let i = 0; i < Buttons.length; i++) {
+  Buttons[i].addEventListener("click", showDemoAction);
+}
+
+/* Search filter */
+function searchTable() {
+    let Search = this.value.toLowerCase();
+    let Rows = document.querySelectorAll("table tbody tr");
+
+    for (let i = 0; i < Rows.length; i++) {
+        let Text = Rows[i].textContent.toLowerCase();
+
+        if (Text.indexOf(Search) !== -1) {
+            Rows[i].style.display = "";
         } else {
-            alert("Demo action: " + action);
+            Rows[i].style.display = "none";
         }
-    });
+    }
+}
+
+let SearchBoxes = document.querySelectorAll(".search-box");
+
+for (let i = 0; i < SearchBoxes.length; i++) {
+    SearchBoxes[i].addEventListener("input", searchTable);
 }
