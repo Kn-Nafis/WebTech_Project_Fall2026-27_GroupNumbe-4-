@@ -8,7 +8,8 @@ function collect_settings() {
 
   if (Name == true && Email == true) {
     Message.textContent = " Settings are valid. No changes have been saved.";
-  } else {
+  }
+   else {
     Message.textContent = "Please correct the errors above.";
   }
 
@@ -22,7 +23,8 @@ function validatePlatformName() {
   if (Name == "") {
     Error.textContent = "Please enter the platform name.";
     return false;
-  } else {
+  } 
+  else {
     Error.textContent = "";
     return true;
   }
@@ -36,10 +38,12 @@ function validateSupportEmail() {
   if (Email == "") {
     Error.textContent = "Please enter the support email.";
     return false;
-  } else if (!RegularExpression.test(Email)) {
+  } 
+  else if (!RegularExpression.test(Email)) {
     Error.textContent = "Please enter a valid email address.";
     return false;
-  } else {
+  } 
+  else {
     Error.textContent = "";
     return true;
   }
@@ -55,7 +59,8 @@ function collect_password() {
   if (Current == true && New == true && Confirm == true) {
     Message.textContent =
       "Demo: Password fields are valid. The password has not been changed.";
-  } else {
+  } 
+  else {
     Message.textContent = "Please correct the errors above.";
   }
 
@@ -69,7 +74,8 @@ function validateCurrentPassword() {
   if (Password == "") {
     Error.textContent = "Please enter your current password.";
     return false;
-  } else {
+  } 
+  else {
     Error.textContent = "";
     return true;
   }
@@ -82,7 +88,8 @@ function validateNewPassword() {
   if (Password == "") {
     Error.textContent = "Please enter a new password.";
     return false;
-  } else {
+  } 
+  else {
     Error.textContent = "";
     return true;
   }
@@ -96,10 +103,12 @@ function validateConfirmPassword() {
   if (Confirm == "") {
     Error.textContent = "Please confirm your new password.";
     return false;
-  } else if (Password !== Confirm) {
+  } 
+  else if (Password !== Confirm) {
     Error.textContent = "New password and confirm password must match.";
     return false;
-  } else {
+  }
+   else {
     Error.textContent = "";
     return true;
   }
@@ -136,22 +145,23 @@ for (let i = 0; i < Buttons.length; i++) {
 
 /* Search filter */
 function searchTable() {
-    let Search = this.value.toLowerCase();
-    let Rows = document.querySelectorAll("table tbody tr");
+  let Search = this.value.toLowerCase();
+  let Rows = document.querySelectorAll("table tbody tr");
 
-    for (let i = 0; i < Rows.length; i++) {
-        let Text = Rows[i].textContent.toLowerCase();
+  for (let i = 0; i < Rows.length; i++) {
+    let Text = Rows[i].textContent.toLowerCase();
 
-        if (Text.indexOf(Search) !== -1) {
-            Rows[i].style.display = "";
-        } else {
-            Rows[i].style.display = "none";
-        }
+    if (Text.indexOf(Search) !== -1) {
+      Rows[i].style.display = "";
+    } 
+    else {
+      Rows[i].style.display = "none";
     }
+  }
 }
 
 let SearchBoxes = document.querySelectorAll(".search-box");
 
 for (let i = 0; i < SearchBoxes.length; i++) {
-    SearchBoxes[i].addEventListener("input", searchTable);
+  SearchBoxes[i].addEventListener("input", searchTable);
 }
