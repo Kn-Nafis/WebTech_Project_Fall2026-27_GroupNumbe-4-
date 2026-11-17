@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Register | LearnMate Tutor
+  </title>
+  <link href="css/tutor.css" rel="stylesheet"/>
+ </head>
+ <body data-page="register">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a href="register.html">
+     Register
+    </a>
+    <a href="login.html">
+     Login
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     Tutor Registration
+    </h1>
+    <p>
+     Try tutor registration validation. Already a Student? Use Become a Tutor on the Student Dashboard as a demo. No account is saved.
+    </p>
+   </section>
+   <form class="card" novalidate="" onsubmit="return validateRegistration()">
+    <label for="fullName">
+     Full Name
+    </label>
+    <input id="fullName" type="text"/>
+    <p class="error" id="fullNameError">
+    </p>
+    <label for="email">
+     Email
+    </label>
+    <input id="email" type="email"/>
+    <p class="error" id="emailError">
+    </p>
+    <label for="password">
+     Password
+    </label>
+    <input id="password" type="password"/>
+    <p class="error" id="passwordError">
+    </p>
+    <label for="confirmPassword">
+     Confirm Password
+    </label>
+    <input id="confirmPassword" type="password"/>
+    <p class="error" id="confirmPasswordError">
+    </p>
+    <label for="subject">
+     Expert Subject
+    </label>
+    <select id="subject">
+     <option value="">
+      Select Expert Subject
+     </option>
+     <option value="Mathematics">
+      Mathematics
+     </option>
+     <option value="English">
+      English
+     </option>
+     <option value="Physics">
+      Physics
+     </option>
+     <option value="Programming">
+      Programming
+     </option>
+    </select>
+    <p class="error" id="subjectError">
+    </p>
+    <label for="rate">
+     Hourly Rate (BDT)
+    </label>
+    <input id="rate" min="100" type="number"/>
+    <p class="error" id="rateError">
+    </p>
+    <label>
+     <input id="terms" type="checkbox"/>
+     I agree to the project terms
+    </label>
+    <p class="error" id="termsError">
+    </p>
+    <button type="submit">
+     Register
+    </button>
+    <p class="message" id="resultMessage">
+    </p>
+   </form>
+   <p>
+    Already registered?
+    <a href="login.html">
+     Tutor Login
+    </a>
+   </p>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Tutor Portal
+  </footer>
+  <script src="js/tutor-validation.js">
+  </script>
+  <script src="js/tutor.js">
+  </script>
+ </body>
+</html>
