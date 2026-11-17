@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard | LearnMate Admin</title>
+    <link href="css/admin.css" rel="stylesheet" />
+  </head>
+  <body data-page="dashboard">
+    <header>
+      <a class="logo" href="../index.html">
+        Learn
+        <span> Mate. </span>
+      </a>
+      <nav>
+        <a href="../index.html"> Home </a>
+        <a class="active" href="dashboard.html"> Dashboard </a>
+        <a class="" href="user-management.html"> Manage Users </a>
+        <a class="" href="tutor-verification.html"> Tutor Verification </a>
+        <a class="" href="course-management.html"> Manage Courses </a>
+        <a class="" href="booking-management.html"> Manage Bookings </a>
+        <a class="" href="reports.html"> Reports </a>
+        <a
+          href="#"
+          onclick="
+            logout();
+            return false;
+          "
+        >
+          Logout
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>
+          Admin Dashboard:
+          <span id="welcomeName"> Administrator </span>
+        </h1>
+        <p>Manage users, approve tutors, review courses and bookings.</p>
+      </section>
+      <div class="grid">
+        <section class="card">
+          <img alt="User management" src="assets/user-management.png" />
+          <h2>Users</h2>
+          <p id="userCount"></p>
+          <a class="btn" href="user-management.html"> Open Users </a>
+        </section>
+        <section class="card">
+          <img alt="Tutor verification" src="assets/tutor-verification.png" />
+          <h2>Verification</h2>
+          <a class="btn" href="tutor-verification.html"> Review Tutors </a>
+        </section>
+        <section class="card">
+          <img alt="Reports" src="assets/reports-analytics.png" />
+          <h2>Reports</h2>
+          <a class="btn" href="reports.html"> View Reports </a>
+        </section>
+      </div>
+    </main>
+    <footer>
+      LearnMate &copy; 2026 | Web Technologies Student Project | Admin Portal
+    </footer>
+    <script src="js/admin-validation.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

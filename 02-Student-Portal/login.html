@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Login | LearnMate Student
+  </title>
+  <link href="css/student.css" rel="stylesheet"/>
+ </head>
+ <body data-page="login">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a href="register.html">
+     Register
+    </a>
+    <a href="login.html">
+     Login
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     Student Login
+    </h1>
+    <p>
+     Demo login: enter any valid email and password (at least 6 characters). No real account is checked.
+    </p>
+   </section>
+   <form class="card" novalidate="" onsubmit="return validateLogin()">
+    <label for="email">
+     Email
+    </label>
+    <input id="email" type="email"/>
+    <p class="error" id="emailError">
+    </p>
+    <label for="password">
+     Password
+    </label>
+    <input id="password" type="password"/>
+    <p class="error" id="passwordError">
+    </p>
+    <button type="submit">
+     Login
+    </button>
+    <p class="message" id="resultMessage">
+    </p>
+   </form>
+   <p>
+    New here?
+    <a href="register.html">
+     Create a student account
+    </a>
+    .
+   </p>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Student Portal
+  </footer>
+  <script src="js/student-validation.js">
+  </script>
+  <script src="js/student.js">
+  </script>
+ </body>
+</html>

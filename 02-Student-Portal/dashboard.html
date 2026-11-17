@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard | LearnMate Student
+  </title>
+  <link href="css/student.css" rel="stylesheet"/>
+ </head>
+ <body data-page="dashboard">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a class="active" href="dashboard.html">
+     Dashboard
+    </a>
+    <a class="" href="browse-tutors.html">
+     Browse Tutors
+    </a>
+    <a class="" href="my-bookings.html">
+     My Bookings
+    </a>
+    <a class="" href="my-courses.html">
+     My Courses
+    </a>
+    <a class="" href="learning-progress.html">
+     Learning Progress
+    </a>
+    <a class="" href="profile.html">
+     My Profile
+    </a>
+    <a href="#" onclick="logout(); return false;">
+     Logout
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     Welcome,
+     <span id="welcomeName">
+      Student
+     </span>
+     !
+    </h1>
+    <p>
+     Browse tutors, request sessions and track your learning, all within LearnMate.
+    </p>
+   </section>
+   <div class="grid">
+    <section class="card">
+     <img alt="Tutor illustration" src="assets/tutor-illustration.png"/>
+     <h2>
+      Find a tutor
+     </h2>
+     <p>
+      Choose Mathematics, English, Physics or Programming.
+     </p>
+     <a class="btn" href="browse-tutors.html">
+      Browse Tutors
+     </a>
+    </section>
+    <section class="card">
+     <img alt="Sessions" src="assets/session-illustration.png"/>
+     <h2>
+      My Bookings
+     </h2>
+     <p id="bookingCount">
+      Your bookings appear here.
+     </p>
+     <a class="btn" href="my-bookings.html">
+      Open Bookings
+     </a>
+    </section>
+    <section class="card">
+     <img alt="Study" src="assets/study-illustration.png"/>
+     <h2>
+      My Courses
+     </h2>
+     <p>
+      Explore tutor-created learning courses.
+     </p>
+     <a class="btn" href="my-courses.html">
+      View Courses
+     </a>
+    </section>
+   </div>
+   <section class="card" id="becomeTutorBox">
+    <h2>
+     Become a Tutor (keep your Student role)
+    </h2>
+    <p>
+     You can learn as a student and teach other students too. Try the demo application form. Admin approval and switching roles are demonstrations only; nothing is saved.
+    </p>
+    <p class="message" id="tutorApplicationStatus">
+    </p>
+    <form id="tutorApplicationForm" novalidate="" onsubmit="return applyAsTutor()">
+     <label for="teachSubject">
+      Subject you want to teach
+     </label>
+     <select id="teachSubject">
+      <option value="">
+       Select a subject
+      </option>
+      <option value="Mathematics">
+       Mathematics
+      </option>
+      <option value="English">
+       English
+      </option>
+      <option value="Physics">
+       Physics
+      </option>
+      <option value="Programming">
+       Programming
+      </option>
+     </select>
+     <p class="error" id="teachSubjectError">
+     </p>
+     <label for="teachRate">
+      Hourly Rate (BDT)
+     </label>
+     <input id="teachRate" min="100" type="number"/>
+     <p class="error" id="teachRateError">
+     </p>
+     <button type="submit">
+      Apply to Become a Tutor
+     </button>
+    </form>
+    <p>
+     <a class="btn" href="../tutor/dashboard.html" id="switchTutorButton" onclick="return switchToTutor()" style="display:none">
+      Switch to Tutor Dashboard
+     </a>
+    </p>
+   </section>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Student Portal
+  </footer>
+  <script src="js/student-validation.js">
+  </script>
+  <script src="js/student.js">
+  </script>
+ </body>
+</html>

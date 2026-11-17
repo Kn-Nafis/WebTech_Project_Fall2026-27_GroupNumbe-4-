@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Profile | LearnMate Student
+  </title>
+  <link href="css/student.css" rel="stylesheet"/>
+ </head>
+ <body data-page="profile">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a class="" href="dashboard.html">
+     Dashboard
+    </a>
+    <a class="" href="browse-tutors.html">
+     Browse Tutors
+    </a>
+    <a class="" href="my-bookings.html">
+     My Bookings
+    </a>
+    <a class="" href="my-courses.html">
+     My Courses
+    </a>
+    <a class="" href="learning-progress.html">
+     Learning Progress
+    </a>
+    <a class="active" href="profile.html">
+     My Profile
+    </a>
+    <a href="#" onclick="logout(); return false;">
+     Logout
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     My Profile
+    </h1>
+    <p>
+     Try profile form validation. Information is not saved.
+    </p>
+   </section>
+   <form class="card" novalidate="" onsubmit="return validateProfile()">
+    <label for="fullName">
+     Full Name
+    </label>
+    <input id="fullName" type="text"/>
+    <p class="error" id="fullNameError">
+    </p>
+    <label for="detail">
+     Learning Interest
+    </label>
+    <input id="detail" type="text"/>
+    <p class="error" id="detailError">
+    </p>
+    <button type="submit">
+     Save Changes
+    </button>
+    <p class="message" id="resultMessage">
+    </p>
+   </form>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Student Portal
+  </footer>
+  <script src="js/student-validation.js">
+  </script>
+  <script src="js/student.js">
+  </script>
+ </body>
+</html>
