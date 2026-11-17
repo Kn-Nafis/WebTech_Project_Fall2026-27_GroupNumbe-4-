@@ -127,12 +127,12 @@ function closeBooking(i) {
 }
 function showReports() {
   let output =
-    "<tr><td>Sample Students</td><td>" + demoUsers.length + "</td></tr>";
-  output += "<tr><td>Sample Tutors</td><td>" + demoTutors.length + "</td></tr>";
+    "<tr><td> Students</td><td>" + demoUsers.length + "</td></tr>";
+  output += "<tr><td>Tutors</td><td>" + demoTutors.length + "</td></tr>";
   output +=
-    "<tr><td>Sample Courses</td><td>" + demoCourses.length + "</td></tr>";
+    "<tr><td>Courses</td><td>" + demoCourses.length + "</td></tr>";
   output +=
-    "<tr><td>Sample Bookings</td><td>" + demoBookings.length + "</td></tr>";
+    "<tr><td>Bookings</td><td>" + demoBookings.length + "</td></tr>";
   document.getElementById("reportRows").innerHTML = output;
 }
 window.onload = function () {
