@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reports | LearnMate Admin</title>
+    <link href="css/admin.css" rel="stylesheet" />
+  </head>
+  <body data-page="reports">
+    <header>
+      <a class="logo" href="../index.html">
+        Learn
+        <span> Mate. </span>
+      </a>
+      <nav>
+        <a href="../index.html"> Home </a>
+        <a class="" href="dashboard.html"> Dashboard </a>
+        <a class="" href="user-management.html"> Manage Users </a>
+        <a class="" href="tutor-verification.html"> Tutor Verification </a>
+        <a class="" href="course-management.html"> Manage Courses </a>
+        <a class="" href="booking-management.html"> Manage Bookings </a>
+        <a class="active" href="reports.html"> Reports </a>
+        <a
+          href="#"
+          onclick="
+            logout();
+            return false;
+          "
+        >
+          Logout
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Reports &amp; Analytics</h1>
+        <p>
+          Demo counts calculated from sample arrays and for loops; not live
+          system data.
+        </p>
+      </section>
+      <section class="card">
+        <h2>LearnMate Overview</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="reportRows"></tbody>
+          </table>
+        </div>
+        <br />
+        <button onclick="showReports()">Refresh Report</button>
+      </section>
+    </main>
+    <footer>
+      LearnMate &copy; 2026 | Web Technologies Student Project | Admin Portal
+    </footer>
+    <script src="js/admin-validation.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

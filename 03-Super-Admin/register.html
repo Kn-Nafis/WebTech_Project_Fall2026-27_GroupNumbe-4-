@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Register | LearnMate Admin</title>
+    <link href="css/admin.css" rel="stylesheet" />
+  </head>
+  <body data-page="register">
+    <header>
+      <a class="logo" href="../index.html">
+        Learn
+        <span> Mate. </span>
+      </a>
+      <nav>
+        <a href="../index.html"> Home </a>
+        <a href="register.html"> Register </a>
+        <a href="login.html"> Login </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Admin Registration</h1>
+        <p>
+          Practice admin form validation (demo code: LMADMIN2026). No account is
+          saved.
+        </p>
+      </section>
+      <form
+        class="card"
+        novalidate=""
+        onsubmit="return validateRegistration();"
+      >
+        <label for="fullName"> Full Name </label>
+        <input id="fullName" type="text" />
+        <p class="error" id="fullNameError"></p>
+        <label for="email"> Email </label>
+        <input id="email" type="email" />
+        <p class="error" id="emailError"></p>
+        <label for="password"> Password </label>
+        <input id="password" type="password" />
+        <p class="error" id="passwordError"></p>
+        <label for="confirmPassword"> Confirm Password </label>
+        <input id="confirmPassword" type="password" />
+        <p class="error" id="confirmPasswordError"></p>
+        <label for="accessCode"> Admin Access Code </label>
+        <input id="accessCode" type="text" />
+        <p class="error" id="accessCodeError"></p>
+        <label>
+          <input id="terms" type="checkbox" />
+          I agree to the project terms
+        </label>
+        <p class="error" id="termsError"></p>
+        <button type="submit">Register</button>
+        <p class="message" id="resultMessage"></p>
+      </form>
+      <p>
+        Already registered?
+        <a href="login.html"> Admin Login </a>
+      </p>
+    </main>
+    <footer>
+      LearnMate &copy; 2026 | Web Technologies Student Project | Admin Portal
+    </footer>
+    <script src="js/admin-validation.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

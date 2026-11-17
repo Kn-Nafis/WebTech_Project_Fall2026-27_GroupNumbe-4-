@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>User Management | LearnMate Admin</title>
+    <link href="css/admin.css" rel="stylesheet" />
+  </head>
+  <body data-page="user-management">
+    <header>
+      <a class="logo" href="../index.html">
+        Learn
+        <span> Mate. </span>
+      </a>
+      <nav>
+        <a href="../index.html"> Home </a>
+        <a class="" href="dashboard.html"> Dashboard </a>
+        <a class="active" href="user-management.html"> Manage Users </a>
+        <a class="" href="tutor-verification.html"> Tutor Verification </a>
+        <a class="" href="course-management.html"> Manage Courses </a>
+        <a class="" href="booking-management.html"> Manage Bookings </a>
+        <a class="" href="reports.html"> Reports </a>
+        <a
+          href="#"
+          onclick="
+            logout();
+            return false;
+          "
+        >
+          Logout
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Manage Users</h1>
+        <p>
+          View sample students and try removing one. No real accounts exist or
+          are saved.
+        </p>
+      </section>
+      <section class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Interest</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="userRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer>
+      LearnMate &copy; 2026 | Web Technologies Student Project | Admin Portal
+    </footer>
+    <script src="js/admin-validation.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
