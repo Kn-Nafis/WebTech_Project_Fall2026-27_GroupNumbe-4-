@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard | LearnMate Tutor
+  </title>
+  <link href="css/tutor.css" rel="stylesheet"/>
+ </head>
+ <body data-page="dashboard">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a class="active" href="dashboard.html">
+     Dashboard
+    </a>
+    <a class="" href="courses.html">
+     My Courses
+    </a>
+    <a class="" href="sessions.html">
+     Sessions
+    </a>
+    <a class="" href="availability.html">
+     Availability
+    </a>
+    <a class="" href="students.html">
+     My Students
+    </a>
+    <a class="" href="profile.html">
+     My Profile
+    </a>
+    <a href="#" onclick="logout(); return false;">
+     Logout
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     Tutor Dashboard:
+     <span id="welcomeName">
+      Tutor
+     </span>
+    </h1>
+    <p>
+     Manage your lessons, course catalog and student bookings.
+    </p>
+   </section>
+   <div class="grid">
+    <section class="card">
+     <img alt="Courses" src="assets/tutor-courses.png"/>
+     <h2>
+      Courses
+     </h2>
+     <a class="btn" href="courses.html">
+      Manage Courses
+     </a>
+    </section>
+    <section class="card">
+     <img alt="Sessions" src="assets/tutor-sessions.png"/>
+     <h2>
+      Session Requests
+     </h2>
+     <a class="btn" href="sessions.html">
+      Manage Sessions
+     </a>
+    </section>
+    <section class="card">
+     <img alt="Availability" src="assets/availability.png"/>
+     <h2>
+      Availability
+     </h2>
+     <a class="btn" href="availability.html">
+      Set Availability
+     </a>
+    </section>
+   </div>
+   <section class="card" id="studentSwitchBox" style="display:none">
+    <h2>
+     You are also a Student
+    </h2>
+    <p>
+     Use your student dashboard to book tutors and continue your own studies.
+    </p>
+    <a class="btn" href="../student/dashboard.html" onclick="return switchToStudent()">
+     Switch to Student Dashboard
+    </a>
+   </section>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Tutor Portal
+  </footer>
+  <script src="js/tutor-validation.js">
+  </script>
+  <script src="js/tutor.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Register | LearnMate Student
+  </title>
+  <link href="css/student.css" rel="stylesheet"/>
+ </head>
+ <body data-page="register">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a href="register.html">
+     Register
+    </a>
+    <a href="login.html">
+     Login
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     Student Registration
+    </h1>
+    <p>
+     Practice student registration validation. No real account will be created.
+    </p>
+   </section>
+   <form class="card" novalidate="" onsubmit="return validateRegistration()">
+    <label for="fullName">
+     Full Name
+    </label>
+    <input id="fullName" type="text"/>
+    <p class="error" id="fullNameError">
+    </p>
+    <label for="email">
+     Email
+    </label>
+    <input id="email" type="email"/>
+    <p class="error" id="emailError">
+    </p>
+    <label for="password">
+     Password
+    </label>
+    <input id="password" type="password"/>
+    <p class="error" id="passwordError">
+    </p>
+    <label for="confirmPassword">
+     Confirm Password
+    </label>
+    <input id="confirmPassword" type="password"/>
+    <p class="error" id="confirmPasswordError">
+    </p>
+    <label for="interest">
+     Learning Interest
+    </label>
+    <select id="interest">
+     <option value="">
+      Select Learning Interest
+     </option>
+     <option value="Mathematics">
+      Mathematics
+     </option>
+     <option value="English">
+      English
+     </option>
+     <option value="Physics">
+      Physics
+     </option>
+     <option value="Programming">
+      Programming
+     </option>
+    </select>
+    <p class="error" id="interestError">
+    </p>
+    <label>
+     <input id="terms" type="checkbox"/>
+     I agree to the project terms
+    </label>
+    <p class="error" id="termsError">
+    </p>
+    <button type="submit">
+     Register
+    </button>
+    <p class="message" id="resultMessage">
+    </p>
+   </form>
+   <p>
+    Already registered?
+    <a href="login.html">
+     Student Login
+    </a>
+   </p>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Student Portal
+  </footer>
+  <script src="js/student-validation.js">
+  </script>
+  <script src="js/student.js">
+  </script>
+ </body>
+</html>

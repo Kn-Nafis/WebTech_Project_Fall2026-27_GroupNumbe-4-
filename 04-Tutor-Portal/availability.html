@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Availability | LearnMate Tutor
+  </title>
+  <link href="css/tutor.css" rel="stylesheet"/>
+ </head>
+ <body data-page="availability">
+  <header>
+   <a class="logo" href="../index.html">
+    Learn
+    <span>
+     Mate.
+    </span>
+   </a>
+   <nav>
+    <a href="../index.html">
+     Home
+    </a>
+    <a class="" href="dashboard.html">
+     Dashboard
+    </a>
+    <a class="" href="courses.html">
+     My Courses
+    </a>
+    <a class="" href="sessions.html">
+     Sessions
+    </a>
+    <a class="active" href="availability.html">
+     Availability
+    </a>
+    <a class="" href="students.html">
+     My Students
+    </a>
+    <a class="" href="profile.html">
+     My Profile
+    </a>
+    <a href="#" onclick="logout(); return false;">
+     Logout
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero">
+    <h1>
+     Set Availability
+    </h1>
+    <p>
+     Check a day and time with demo validation. No availability is saved.
+    </p>
+   </section>
+   <form class="card" novalidate="" onsubmit="return validateAvailability()">
+    <label for="day">
+     Day
+    </label>
+    <select id="day">
+     <option value="">
+      Select Day
+     </option>
+     <option value="Monday">
+      Monday
+     </option>
+     <option value="Tuesday">
+      Tuesday
+     </option>
+     <option value="Wednesday">
+      Wednesday
+     </option>
+     <option value="Thursday">
+      Thursday
+     </option>
+     <option value="Friday">
+      Friday
+     </option>
+     <option value="Saturday">
+      Saturday
+     </option>
+     <option value="Sunday">
+      Sunday
+     </option>
+    </select>
+    <p class="error" id="dayError">
+    </p>
+    <label for="startTime">
+     Start Time
+    </label>
+    <input id="startTime" type="time"/>
+    <p class="error" id="startTimeError">
+    </p>
+    <label for="endTime">
+     End Time
+    </label>
+    <input id="endTime" type="time"/>
+    <p class="error" id="endTimeError">
+    </p>
+    <button type="submit">
+     Save Availability
+    </button>
+    <p class="message" id="resultMessage">
+    </p>
+   </form>
+   <section class="card">
+    <h2>
+     Sample Availability
+    </h2>
+    <div id="availabilityRows">
+    </div>
+   </section>
+  </main>
+  <footer>
+   LearnMate &copy; 2026 | Web Technologies Student Project | Tutor Portal
+  </footer>
+  <script src="js/tutor-validation.js">
+  </script>
+  <script src="js/tutor.js">
+  </script>
+ </body>
+</html>
