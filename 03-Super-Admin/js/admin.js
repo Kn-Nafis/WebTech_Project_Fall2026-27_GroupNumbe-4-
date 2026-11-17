@@ -45,7 +45,7 @@ function showUsers() {
       demoUsers[i][2] +
       "</td><td><button onclick='deleteUser(" +
       i +
-      ")'>Remove (Demo)</button></td></tr>";
+      ")'>Remove </button></td></tr>";
   }
   document.getElementById("userRows").innerHTML = output;
 }
@@ -67,7 +67,7 @@ function showTutors() {
       demoTutors[i][3] +
       "</td><td><button onclick='setVerified(" +
       i +
-      ")'>Toggle Approval (Demo)</button></td></tr>";
+      ")'>Toggle Approval </button></td></tr>";
   }
   document.getElementById("tutorRows").innerHTML = output;
 }
@@ -93,7 +93,7 @@ function showCourses() {
       demoCourses[i][3] +
       "</td><td><button onclick='removeCourse(" +
       i +
-      ")'>Remove (Demo)</button></td></tr>";
+      ")'>Remove </button></td></tr>";
   }
   document.getElementById("courseRows").innerHTML = output;
 }
@@ -117,12 +117,12 @@ function showBookings() {
       demoBookings[i][4] +
       "</td><td><button onclick='closeBooking(" +
       i +
-      ")'>Close (Demo)</button></td></tr>";
+      ")'>Close </button></td></tr>";
   }
   document.getElementById("bookingRows").innerHTML = output;
 }
 function closeBooking(i) {
-  demoBookings[i][4] = "Closed (Demo)";
+  demoBookings[i][4] = "Closed ";
   showBookings();
 }
 function showReports() {
